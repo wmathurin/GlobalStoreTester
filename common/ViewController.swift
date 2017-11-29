@@ -98,7 +98,7 @@ class ViewController: UIViewController {
             return (result[0] as! [Int])[0];
         }
         catch let error {
-            SFSDKLogger.sharedDefaultInstance().log(type(of:self), level:.error, message:"Failed to get count from db \(error)");
+            print("Failed to get count from db \(error)");
             return -1;
         }
     }
@@ -107,11 +107,11 @@ class ViewController: UIViewController {
         let newCounter = currentCounter + 1;
         do {
             try self.store.upsertEntries([["id": newCounter]], toSoup: self.SOUP_NAME, withExternalIdPath:"id");
-            SFSDKLogger.sharedDefaultInstance().log(type(of:self), level:.info, message:"Succeeded inserting\(newCounter)");
+            print("Succeeded inserting: \(newCounter)");
             return newCounter;
         }
         catch let error {
-            SFSDKLogger.sharedDefaultInstance().log(type(of:self), level:.error, message:"Failed to insert \(newCounter): \(error)");
+            print("Failed to insert \(newCounter) \(error)");
             return -1;
         }
     }
