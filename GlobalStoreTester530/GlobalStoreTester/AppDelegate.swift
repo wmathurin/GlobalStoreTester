@@ -22,9 +22,18 @@
  WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+import SmartStore
 import UIKit
 
 class AppDelegate : UIResponder, UIApplicationDelegate
 {
     var window: UIWindow?
+    
+    override
+    init()
+    {
+        super.init()
+        SFSDKSmartStoreLogger.setLogLevel(.debug)
+    }
+    
 }
