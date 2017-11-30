@@ -12,9 +12,13 @@ for (var sdkDependency in packageJson.sdkDependencies) {
     var targetDir = path.join('mobile_sdk', sdkDependency);
     if (fs.existsSync(targetDir))
         console.log(targetDir + ' already exists - if you want to refresh it, please remove it and re-run install.js');
-    else
+    else {
         execSync('git clone --branch ' + branch + ' --single-branch --depth 1 ' + repoUrl + ' ' + targetDir, {stdio:[0,1,2]});
+        execSync('git apply ../../0001-Encrypt-db-if-found-unencrypted-5.3-bug-fix.patch', {stdio:[0,1,2], cwd:'mobile_sdk/salesforcemobilesdk-ios'});
+    }
 }
+
+
 
 console.log('Installing pod dependencies');
 execSync('pod update', {stdio:[0,1,2]});

@@ -14,7 +14,7 @@ cd GlobalStoreTester530
 open GlobalStoreTester.xcworkspace
 ```
 
-## To run the application with Mobile SDK 5.3.0 with fixed podfile do:
+## To run the application with Mobile SDK 5.3.0 with fixes (podfile + patch):
 ``` shell
 cd GlobalStoreTester530fixed
 ./install.js
