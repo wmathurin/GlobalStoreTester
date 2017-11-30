@@ -1,6 +1,8 @@
 # Simple app to investigate encryption issues in global store across releases
 
-## To run the application with Mobile SDK 5.0.1 do (NB: it requires XCode 8):
+NB: You need to run XCode 8 for both applications
+
+## To run the application with Mobile SDK 5.0.1 do:
 ``` shell
 cd GlobalStoreTester501
 ./install.js
