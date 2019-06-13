@@ -35,6 +35,13 @@ cd GlobalStoreTester700
 open GlobalStoreTester.xcworkspace
 ```
 
+## To run the application with Mobile SDK 7.1.2 do (Note: only runs in XCode 10)
+``` shell
+cd GlobalStoreTester712
+./install.js
+open GlobalStoreTester.xcworkspace
+```
+
 ## To run the application with latest Mobile SDK (dev) do (Note: runs in Xcode 10)
 ``` shell
 cd GlobalStoreTesterDev
